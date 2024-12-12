@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="emoji closed active">🙈</div>
+    <div class="emoji open">🙉</div>
+    <script>
+        const closedFace = document.querySelector('.closed');
+        const openFace = document.querySelector('.open');
+
+        // add event listener
+        closedFace.addEventListener('click',() =>{
+            if(openFace.classList.contains('open')){
+                openFace.classList.add('active');
+                closedFace.classList.remove('active');
+            }
+        });
+
+        openFace.addEventListener('click',() =>{
+            if(closedFace.classList.contains('closed')){
+                closedFace.classList.add('active');
+                openFace.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
